@@ -17,3 +17,4 @@ This is a simple CI demo project using Jenkins.
 chmod +x app.sh test.sh
 ./app.sh
 ./test.sh
+# trigger build
