@@ -26,10 +26,13 @@ pipeline {
         }
 
         stage('Archive Artifacts') {
-            steps {
-                archiveArtifacts artifacts: 'app.sh', fingerprint: true
-            }
-        }
+	    when {
+        	branch 'main'
+	    }
+    	    steps {
+        	archiveArtifacts artifacts: 'app.sh', fingerprint: true
+    	    }
+	}
     }
 
     post {
